@@ -44,28 +44,28 @@ const VideoCard: NextPage<IProps> = ({
       <div>
         <div className="flex gap-3 p-2 cursor-pointer font-semibold rounded ">
           <div className="md:w-16 md:h-16 w-10 h-10">
-            {/* <Link href={`/profile/${postedBy?._id}`}> */}
-            <>
-              <Image
-                width={62}
-                height={62}
-                className=" rounded-full"
-                src={postedBy?.image}
-                alt="user-profile"
-                layout="responsive"
-              />
-            </>
-            {/* </Link> */}
+            <Link href={`/profile/${postedBy?._id}`}>
+              <>
+                <Image
+                  width={62}
+                  height={62}
+                  className=" rounded-full"
+                  src={postedBy?.image}
+                  alt="user-profile"
+                  layout="responsive"
+                />
+              </>
+            </Link>
           </div>
           <div>
             <Link href={`/profile/${postedBy?._id}`}>
               <div className="flex items-center gap-2">
                 <p className="flex gap-2 items-center md:text-md font-bold text-primary">
-                  {postedBy.userName}{" "}
+                  {postedBy.name}
                   <GoVerified className="text-blue-400 text-md" />
                 </p>
                 <p className="capitalize font-medium text-xs text-gray-500 hidden md:block">
-                  {postedBy.userName}
+                  {postedBy.name}
                 </p>
               </div>
             </Link>
@@ -78,8 +78,8 @@ const VideoCard: NextPage<IProps> = ({
 
       <div className="lg:ml-20 flex gap-4 relative">
         <div
-          //   onMouseEnter={() => setIsHover(true)}
-          //   onMouseLeave={() => setIsHover(false)}
+          onMouseEnter={() => setIsHover(true)}
+          onMouseLeave={() => setIsHover(false)}
           className="rounded-3xl"
         >
           <Link href={`/detail/${_id}`}>
