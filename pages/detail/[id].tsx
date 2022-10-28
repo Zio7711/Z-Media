@@ -1,16 +1,16 @@
 import { HiVolumeOff, HiVolumeUp } from "react-icons/hi";
 import React, { useEffect, useRef, useState } from "react";
 
-// import Comments from '../../components/Comments';
 import { BASE_URL } from "../../utils";
 import { BsFillPlayFill } from "react-icons/bs";
+import Comments from "../../components/Comments";
 import { GoVerified } from "react-icons/go";
 import Image from "next/image";
+import LikeButton from "../../components/LikeButton";
 import Link from "next/link";
 import { MdOutlineCancel } from "react-icons/md";
 import { Video } from "../../types";
 import axios from "axios";
-// import LikeButton from '../../components/LikeButton';
 import useAuthStore from "../../store/authStore";
 import { useRouter } from "next/router";
 
@@ -141,23 +141,21 @@ const Detail = ({ postDetails }: IProps) => {
               </div>
               <div className="mt-10 px-10">
                 {userProfile && (
-                  //   <LikeButton
-                  //     likes={post.likes}
-                  //     flex="flex"
-                  //     handleLike={() => handleLike(true)}
-                  //     handleDislike={() => handleLike(false)}
-                  //   />
-                  <div>like button</div>
+                  <LikeButton
+                    likes={post.likes}
+                    flex="flex"
+                    handleLike={() => handleLike(true)}
+                    handleDislike={() => handleLike(false)}
+                  />
                 )}
               </div>
-              {/* <Comments
+              <Comments
                 comment={comment}
                 setComment={setComment}
                 addComment={addComment}
                 comments={post.comments}
                 isPostingComment={isPostingComment}
-              /> */}
-              <div>comments</div>
+              />
             </div>
           </div>
         </div>
