@@ -67,10 +67,11 @@ const NavBar = () => {
                 <>
                   {/* <Image
                     className="rounded-full cursor-pointer"
-                    src={user.image}
+                    src={user?.image}
                     alt="user"
                     width={40}
                     height={40}
+                    referrerPolicy="no-referrer"
                   /> */}
                   <img
                     src={user.image}
