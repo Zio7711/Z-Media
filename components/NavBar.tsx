@@ -65,19 +65,19 @@ const NavBar = () => {
             {user.image && (
               <Link href={`/profile/${user._id}`}>
                 <>
-                  {/* <Image
+                  <Image
                     className="rounded-full cursor-pointer"
                     src={user?.image}
                     alt="user"
                     width={40}
                     height={40}
                     referrerPolicy="no-referrer"
-                  /> */}
-                  <img
+                  />
+                  {/* <img
                     src={user.image}
                     alt="user"
                     className="rounded-full cursor-pointer w-10 h-10"
-                  />
+                  /> */}
                 </>
               </Link>
             )}

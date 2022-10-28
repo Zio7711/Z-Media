@@ -46,19 +46,19 @@ const VideoCard: NextPage<IProps> = ({
           <div className="md:w-16 md:h-16 w-10 h-10">
             <Link href={`/profile/${postedBy?._id}`}>
               <>
-                {/* <Image
+                <Image
                   width={62}
                   height={62}
                   className=" rounded-full"
                   src={postedBy?.image}
                   alt="user-profile"
                   layout="responsive"
-                /> */}
-                <img
+                />
+                {/* <img
                   className="rounded-full h-12 w-12"
                   src={postedBy?.image}
                   alt="user-profile"
-                />
+                /> */}
               </>
             </Link>
           </div>
