@@ -22,6 +22,7 @@ const NavBar = () => {
     e.preventDefault();
 
     if (searchValue) {
+      setSearchValue("");
       router.push(`/search/${searchValue}`);
     }
   };
